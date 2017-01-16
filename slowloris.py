@@ -102,7 +102,7 @@ def main():
         list_of_sockets.append(s)
 
     while True:
-        sys.stdout.write('Sending keep-alive hearder with %d socket: ' %(list_of_sockets))
+        sys.stdout.write('Sending keep-alive hearder with %d socket: ' %(len(list_of_sockets)))
         sys.stdout.flush()
         #logging.info("Sending keep-alive headers... Socket count: %s", len(list_of_sockets))
         for s in list(list_of_sockets):
