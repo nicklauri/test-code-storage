@@ -102,7 +102,9 @@ def main():
         list_of_sockets.append(s)
 
     while True:
-        logging.info("Sending keep-alive headers... Socket count: %s", len(list_of_sockets))
+        sys.stdout.write('Sending keep-alive hearder with %d socket: ' %(list_of_sockets))
+        sys.stdout.flush()
+        #logging.info("Sending keep-alive headers... Socket count: %s", len(list_of_sockets))
         for s in list(list_of_sockets):
             try:
                 s.send("X-a: {}\r\n".format(random.randint(1, 5000)).encode("utf-8"))
@@ -117,7 +119,9 @@ def main():
                     list_of_sockets.append(s)
             except socket.error:
                 break
-        time.sleep(15)
+        time.sleep(3)
+        sys.stdout.write('OK\n')
+        sys.stdout.flush()
 
 if __name__ == "__main__":
 	main()
