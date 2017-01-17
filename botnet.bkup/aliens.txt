@@ -1,0 +1,5 @@
+http://nibbler.silktide.com/en_US/report/submit;$POST;url
+https://gtmetrix.com/analyze.html;$POST;url
+http://isitdown.co.uk/check/;$POST;domainname
+https://api.loadimpact.com/v3/anonymous-test-runs;$POST;url
+http://uitest.com/en/check/results/;$POST;url
